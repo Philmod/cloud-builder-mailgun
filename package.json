@@ -1,0 +1,18 @@
+{
+  "name": "cloud-builder-mailgun",
+  "version": "0.0.1",
+  "main": "index.js",
+  "author": "Philmod <philippe.modard@gmail.com>",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "commander": "^2.11.0",
+    "mailgun-js": "^0.13.1"
+  },
+  "main": "./index.js",
+  "bin": {
+    "mailgun": "./index.js"
+  },
+  "scripts": {
+    "start": "node ./index.js"
+  }
+}
