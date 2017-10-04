@@ -1,0 +1,15 @@
+steps:
+- name: 'gcr.io/$PROJECT_ID/mailgun'
+  args:
+  - '--subject=hello world'
+  - '--content=hello content'
+  - '--sender=me@philmod.be'
+  - '--recipient=philippe.modard@gmail.com'
+  env:
+  - 'MAILGUN_DOMAIN=philmod.be'
+  secretEnv: ['MAILGUN_API_KEY']
+
+secrets:
+- kmsKeyName: projects/node-example-gke/locations/global/keyRings/my-keyring/cryptoKeys/mailgun-api-key
+  secretEnv:
+    MAILGUN_API_KEY: CiQA8Tsje0VCEpNGyvePIDtrQcTirhyYecVqv3NcRHSA1kO+6XYSTQCauY9GXl8awECPnC+NGXZU33mfMiJikug76ThlUe5AQi2pTlP6FEceVpwd2vRyOWUwRjtsT9OiWS4EqyU1yrBx12BmIsxv7iFyJetc
